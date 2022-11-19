@@ -1,0 +1,158 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 1em;
+    align-content: center;
+    margin:0;
+}
+
+header p{
+    font-size: 1.2em;
+}
+
+.logo-title{
+    font-weight: 600;
+    margin: 0
+}
+
+nav a{
+    text-decoration: none;
+     color: #090909;
+     font-size: 0.8rem;
+
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.2em;  
+    margin: 0;
+}
+
+/* intro */
+.intro{
+    display: flex;
+    flex-direction: column;
+    padding: 3em 1em 1em 1em;
+    gap: 1em;
+    
+}
+
+.intro h1{
+    line-height: 1;
+    font-size: 2em;
+    color: black;
+    text-shadow: 0 0 10px white;   
+}
+.intro p{
+    line-height: 1.2;
+} 
+
+
+.intro p, .intro h1{
+    margin: 0;
+}
+
+/* main */
+
+main{
+    padding: 1em;
+}
+
+
+/* recent posts section */
+
+.recent-posts{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em;
+    grid-gap: 1.7em;
+}
+
+.recent-posts img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.recent-posts h3{
+    justify-self: center;
+    margin: 0;
+}
+.recent-posts p{
+    margin: 0.5em 0;
+}
+
+
+
+/* footer */
+
+footer{
+    padding:2.5em  1.5em;
+    text-align: center;
+     background: #202020;
+      color:  #D7D7D7;
+}
+footer p{
+    margin: 0;
+}
+.footer-title{
+    font-weight: bold;
+    margin-bottom: 0.3em; 
+}
+
+
+@media (min-width: 570px){
+     /* header */
+   header{
+       padding: 2em 1em;
+   }
+   header p{
+       font-size: 1.7rem;
+   }
+   nav a{
+      font-size: 1em; 
+   }
+   
+   /* intro */
+   .intro p, .intro h1{
+       max-width: 800px;
+   }
+   .intro p{
+       padding: 0 1.5em
+   }
+   .intro h1{
+       padding: 0 0.75em;
+   }
+
+   
+    /* main section */
+   main{
+      padding-left: 12em;
+      padding-right: 4em;
+   }
+   
+   main section{
+       max-width: 850px;
+   }
+   
+   .recent-posts{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+        padding: 2em 1em;
+   }
+   .recent-posts h3{
+       grid-column: 1/-1
+   }
+}

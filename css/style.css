@@ -1,0 +1,188 @@
+html, 
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 1em;
+    align-content: center;
+    margin:0;
+}
+
+header p{
+    font-size: 1.2em;
+}
+
+.logo-title{
+    font-weight: 600;
+    margin: 0
+}
+
+nav a{
+    text-decoration: none;
+     color: #090909;
+     font-size: 0.8rem;
+
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 1.2em;  
+    margin: 0;
+}
+
+/* intro section */
+
+.intro-section{
+    position: relative;
+    overflow: hidden;
+}
+
+.intro{
+    
+    position: absolute;
+    top: 12vh;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1em;
+    gap: 0.8em;
+    color: #f5ebe0;
+}
+.bg-img{
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9));
+    padding: 1em 0;
+}
+
+.bg-img img{
+    width: 100%;
+    min-height: 50vh;
+    filter: blur(4px);
+}
+
+.intro h1{
+    line-height: 1;
+    font-size: 2em;
+    color: white;
+    text-shadow: 4px 4px 10px black ; 
+}
+.intro P{
+    line-height: 1.2;
+    text-shadow: 1px 1px 10px black ; 
+} 
+
+.intro p, .intro h1{
+    margin: 0;
+}
+
+
+/* main css */
+
+main{
+    padding: 2em 1em;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr ; 
+    grid-gap: 2.5em;
+}
+
+main img{
+    width: 100%;
+}
+
+main h3{
+    margin: 0.5em 0;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.date{
+    margin-top: 1em;
+}
+
+main p, footer p{
+    margin: 0;
+}
+.view-more, .more-info{
+    align-self: center;
+    justify-self: center;
+}
+.view-more a, .more-info a{
+    color: black;
+    font-weight: 700;
+}
+.wide-card{
+    display: none;
+}
+
+
+/* footer css */
+footer{
+    padding:2.5em  1.5em;
+    text-align: center;
+     background: #202020;
+      color:  #D7D7D7;
+}
+.footer-title{
+    font-weight: bold;
+    margin-bottom: 0.3em; 
+}
+
+
+/* @media query */
+
+@media (min-width: 670px){
+    /* header */
+   header{
+       padding: 2em 1.5em;
+   }
+   header p{
+       font-size: 1.7rem;
+   }
+   nav a{
+      font-size: 1em; 
+   }
+   
+   .bg-img{
+       max-height: 80vh;
+   }
+    
+    /* intro */
+    .intro{
+        padding: 12em 3em 3em 3em;
+    }
+    
+  .intro h1, .intro p{
+      max-width: 600px;
+  }
+  
+  /* main */ 
+  
+  main{
+      display: grid;
+      grid-template-columns: minmax(200px, 1fr) minmax(200px, 1fr) minmax(200px, 1fr);
+      grid-row: 1fr 1fr 1fr;
+      gap:1.5em
+  }
+  main p{
+      max-width: 400px;
+  }
+
+  
+  .view-more{
+      grid-column: 1/-1;
+  }
+  .more-info{
+    grid-column: 1/-1;
+  }
+}
